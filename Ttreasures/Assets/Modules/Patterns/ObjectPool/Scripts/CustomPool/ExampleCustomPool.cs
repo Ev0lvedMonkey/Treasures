@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ExamplePool : MonoBehaviour
+public class ExampleCustomPool : MonoBehaviour
 {
     [SerializeField] private Transform _spawnPoint;
     [SerializeField] private Bullet _prefab;
