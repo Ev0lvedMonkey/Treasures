@@ -1,15 +1,14 @@
 using UnityEngine;
 
-public class NewBehaviourScript : MonoBehaviour, IService
+internal class ServiceLoacator_test : MonoBehaviour, IService
 {
     [SerializeField] private ServiceTest _testService;
 
     //Bad example, but im lazy
 
-    private void Update()
+    private void Start()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse0))
-            Debug.Log($"{ServiceLocator.Current.Get<ServiceTest>().SecretNumber}");
+        Debug.Log($"{ServiceLocator.Current.Get<ServiceTest>().SecretNumber}");
     }
 
 

@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public abstract class Dialog : MonoBehaviour
+internal abstract class Dialog : MonoBehaviour
 {
     [SerializeField] private Button _exampleBtn;
 

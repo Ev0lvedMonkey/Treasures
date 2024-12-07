@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.Pool;
 
-public class UnityPoolExample : MonoBehaviour
+internal class UnityPoolExample : MonoBehaviour
 {
     [SerializeField] private Transform _spawnPoint;
     [SerializeField] private Bullet _prefab;
@@ -37,8 +37,7 @@ public class UnityPoolExample : MonoBehaviour
     private void Spawn()
     {
         var bullet = _bulletPool.Get();
-        bullet.transform.position = _spawnPoint.position;
-        bullet.transform.rotation = _spawnPoint.rotation;
+        bullet.transform.SetPositionAndRotation(_spawnPoint.position, _spawnPoint.rotation);
         bullet.Init();
         Debug.Log($"Spawned {bullet.name}");
     }

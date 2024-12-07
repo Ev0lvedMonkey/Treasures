@@ -1,7 +1,7 @@
 using UnityEngine;
 using Zenject;
 
-public class ObjectMoverExample : MonoBehaviour
+internal class ObjectMoverExample : MonoBehaviour
 {
     private float moveSpeed = 10f;
 
@@ -16,7 +16,8 @@ public class ObjectMoverExample : MonoBehaviour
         float verticalAxis = Input.GetAxis(Vertical);
         var moveDir = new Vector3(horizontalAxis, verticalAxis, 0);
         transform.Translate(moveDir * (Time.deltaTime * moveSpeed));
-        _spawner.Spawn();
+        if (Input.GetKeyDown(KeyCode.Q))
+            _spawner.Spawn();
     }
 
     [Inject]

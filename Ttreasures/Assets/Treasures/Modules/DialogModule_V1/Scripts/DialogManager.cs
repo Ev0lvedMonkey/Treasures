@@ -6,13 +6,13 @@ public class DialogManager
 {
     private const string PrefabsFilePath = "DialogModule/Prefabs/";
 
-    private static readonly Dictionary<Type, string> PrefabsDictionary = new Dictionary<Type, string>()
+    private static readonly Dictionary<Type, string> PrefabsDictionary = new()
     {
         {typeof(FirstDialog),"FirstDialog"},
         {typeof(SecondDialog),"SecondDialog"},
     };
 
-    public static T ShowDialog<T>() where T : Dialog
+    internal static T ShowDialog<T>() where T : Dialog
     {
         var gameObject = GetPrefabByType<T>();
         if (gameObject == null)

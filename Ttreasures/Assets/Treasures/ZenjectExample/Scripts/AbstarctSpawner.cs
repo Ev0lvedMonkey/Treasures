@@ -1,10 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class AbstarctSpawner : MonoBehaviour
+internal class AbstarctSpawner : MonoBehaviour
 {
-    public void Spawn()
+    internal void Spawn()
     {
         Debug.LogWarning($"spawn something");
     }

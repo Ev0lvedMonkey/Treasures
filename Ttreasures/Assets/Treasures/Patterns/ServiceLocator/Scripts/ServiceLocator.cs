@@ -2,11 +2,11 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ServiceLocator 
+internal class ServiceLocator 
 {
     private ServiceLocator() { }
 
-    private readonly Dictionary<string, IService> _services = new Dictionary<string, IService>();
+    private readonly Dictionary<string, IService> _services = new();
 
     public static ServiceLocator Current { get; private set; }
 
@@ -15,7 +15,7 @@ public class ServiceLocator
         Current = new ServiceLocator();
     }
 
-    public T Get<T>() where T : IService
+    internal T Get<T>() where T : IService
     {
         string key = typeof(T).Name;
         if (!_services.ContainsKey(key))
@@ -26,7 +26,7 @@ public class ServiceLocator
         return (T)_services[key];
     }
 
-    public void Register<T>(T service) where T : IService
+    internal void Register<T>(T service) where T : IService
     {
         string key = typeof(T).Name;
         if (_services.ContainsKey(key))
@@ -37,7 +37,7 @@ public class ServiceLocator
         _services.Add(key, service);
     }
 
-    public void Unregister<T>() where T : IService
+    internal void Unregister<T>() where T : IService
     {
         string key = typeof(T).Name;
         if (!_services.ContainsKey(key))

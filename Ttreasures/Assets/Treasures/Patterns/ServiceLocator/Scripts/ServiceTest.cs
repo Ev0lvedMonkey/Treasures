@@ -1,8 +1,8 @@
 using UnityEngine;
 
-public class ServiceTest : MonoBehaviour, IService
+internal class ServiceTest : MonoBehaviour, IService
 {
-    public int SecretNumber { get; private set; }
+    internal int SecretNumber { get; private set; }
 
     private void Start()
     {

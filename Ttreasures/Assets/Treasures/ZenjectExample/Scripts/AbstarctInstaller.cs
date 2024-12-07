@@ -1,7 +1,7 @@
 using UnityEngine;
 using Zenject;
 
-public class AbstarctInstaller : MonoInstaller
+internal class AbstarctInstaller : MonoInstaller
 {
     [SerializeField] private AbstarctSpawner _abstarctSpawner;
 

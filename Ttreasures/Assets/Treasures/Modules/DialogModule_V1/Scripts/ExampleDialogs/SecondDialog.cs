@@ -1,15 +1,13 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class FirstDialog : Dialog, ISinglRepresentative
+internal class SecondDialog : Dialog
 {
     [SerializeField] private Button _nextDialogButton;
-    private static FirstDialog Instance;
 
     private void Awake()
     {
         InitButtonLiseners();
-        UseSinglRepresentative();
     }
 
     protected void InitButtonLiseners()
@@ -20,15 +18,8 @@ public class FirstDialog : Dialog, ISinglRepresentative
 
     private void NextDialog()
     {
-        DialogManager.ShowDialog<SecondDialog>();
+        DialogManager.ShowDialog<FirstDialog>();
         base.Hide();
     }
 
-    public void UseSinglRepresentative()
-    {
-        if(Instance == null)
-            Instance = this;
-        else
-            Destroy(Instance);
-    }
 }

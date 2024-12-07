@@ -1,0 +1,23 @@
+{
+    "name": "ZenjectExample",
+    "rootNamespace": "ZenjectExample",
+    "references": [
+        "GUID:d0acddb179989574c8355991596bd3e6",
+        "GUID:2845024868d5894408e3dc7b917ca748",
+        "GUID:b4d325adfafa9454b8d5f7d62eca2a8a",
+        "GUID:e988738e8012f5a4fa42a45fcab11e2c",
+        "GUID:14f8b558cd941e545961d1d8d31254f0",
+        "GUID:a2f2239355369ba4fb6909aeaa41def5",
+        "GUID:ca74154b909888b4489cf0ce196562fe",
+        "GUID:0d8beb7f090555447a6cf5ce9e54dbb4"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

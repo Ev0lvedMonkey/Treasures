@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ExampleCustomPool : MonoBehaviour
+internal class ExampleCustomPool : MonoBehaviour
 {
     [SerializeField] private Transform _spawnPoint;
     [SerializeField] private Bullet _prefab;
@@ -33,8 +33,7 @@ public class ExampleCustomPool : MonoBehaviour
 
         var item = pool.Get();
         item.Init();
-        item.transform.position = _spawnPoint.position;
-        item.transform.rotation = Quaternion.identity;
+        item.transform.SetPositionAndRotation(_spawnPoint.position, Quaternion.identity);
         Debug.Log($"Spawned on pos {item.transform.position}\n Spawn pos {_spawnPoint.position}");
     }
 

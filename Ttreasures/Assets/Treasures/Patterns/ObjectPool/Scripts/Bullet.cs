@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
-public class Bullet : MonoBehaviour
+internal class Bullet : MonoBehaviour
 {
     [SerializeField] private Rigidbody2D _rb;
     private const float BulletLifeTime = 3f;
@@ -16,7 +16,7 @@ public class Bullet : MonoBehaviour
         }
     }
 
-    public void Init()
+    internal void Init()
     {
         ResetState();
         StartCoroutine(Spawn());
