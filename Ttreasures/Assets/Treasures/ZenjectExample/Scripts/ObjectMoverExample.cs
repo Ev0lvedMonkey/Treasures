@@ -3,7 +3,7 @@ using Zenject;
 
 internal class ObjectMoverExample : MonoBehaviour
 {
-    private float moveSpeed = 10f;
+    private const float MoveSpeed = 10f;
 
     private const string Horizontal = "Horizontal";
     private const string Vertical = "Vertical";
@@ -15,7 +15,7 @@ internal class ObjectMoverExample : MonoBehaviour
         float horizontalAxis = Input.GetAxis(Horizontal);
         float verticalAxis = Input.GetAxis(Vertical);
         var moveDir = new Vector3(horizontalAxis, verticalAxis, 0);
-        transform.Translate(moveDir * (Time.deltaTime * moveSpeed));
+        transform.Translate(moveDir * (Time.deltaTime * MoveSpeed));
         if (Input.GetKeyDown(KeyCode.Q))
             _spawner.Spawn();
     }

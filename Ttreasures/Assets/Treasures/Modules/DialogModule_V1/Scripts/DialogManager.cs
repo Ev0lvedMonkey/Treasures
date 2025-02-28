@@ -12,7 +12,7 @@ public class DialogManager
         {typeof(SecondDialog),"SecondDialog"},
     };
 
-    internal static T ShowDialog<T>() where T : Dialog
+    internal static T ShowDialog<T>() where T : V1Dialog
     {
         var gameObject = GetPrefabByType<T>();
         if (gameObject == null)
@@ -23,7 +23,7 @@ public class DialogManager
         return GameObject.Instantiate(gameObject);
     }
 
-    private static T GetPrefabByType<T>() where T : Dialog
+    private static T GetPrefabByType<T>() where T : V1Dialog
     {
         string prefabName = PrefabsDictionary[typeof(T)];
 

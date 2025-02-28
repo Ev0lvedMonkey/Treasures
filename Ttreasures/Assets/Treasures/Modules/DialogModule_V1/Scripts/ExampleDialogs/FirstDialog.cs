@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-internal class FirstDialog : Dialog, ISinglRepresentative
+internal class FirstDialog : V1Dialog, ISinglRepresentative
 {
     [SerializeField] private Button _nextDialogButton;
     private static FirstDialog Instance;

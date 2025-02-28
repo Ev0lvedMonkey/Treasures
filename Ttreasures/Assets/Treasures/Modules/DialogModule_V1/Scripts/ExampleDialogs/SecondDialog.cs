@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-internal class SecondDialog : Dialog
+internal class SecondDialog : V1Dialog
 {
     [SerializeField] private Button _nextDialogButton;
 
